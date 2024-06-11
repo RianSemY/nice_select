@@ -1,0 +1,84 @@
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+}
+form{
+	margin-top: 50px;
+	margin-left: 50px;
+	width: 400px;
+}
+.select_container{
+	display: flex;
+	flex-direction: column;
+}
+.select_container h3{
+	font-weight: normal;
+	border: 1px solid gray;
+	padding: 5px;
+	display: flex;
+	justify-content: space-between;
+}
+.select_container h3:hover{
+	background-color: #e8e8e8;
+}
+.select_container h3:active{
+	background-color: #bababa;
+}
+.radio_container{
+	display: flex;
+	flex-direction: column;
+	visibility: hidden;
+	height: 0px;
+	transition:.23s height ease;
+	overflow: auto;
+	width: calc(100% + 5px - 1px);
+}
+.visible{
+	height: 100px;
+	visibility: visible;
+}
+.radio_container::-webkit-scrollbar {
+    width: 5px;
+}
+.radio_container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
+
+.radio_container::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+.radio_container label{
+	display: flex;
+	border: 1px solid gray;
+	transition: .1s all;
+}
+.radio_container label:hover{
+	background-color: #cacaca;
+}
+.radio_container label p{
+	font-size: 1.2rem;
+	padding: 5px;
+	font-weight: normal;
+}
+.radio_container label input{
+	appearance: none;
+}
+.radio_container label.selected {
+    background-color: #a1a1a1;
+}
+button{
+	margin-top: 30px;
+	padding: 10px;
+	border: none;
+	outline: none;
+	background-color: black;
+	color: white;
+	font-size: 1.7rem;
+	cursor: pointer;
+}
+button:hover{
+	transform: scale(1.1);
+}
